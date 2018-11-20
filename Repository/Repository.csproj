@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDF6C297-6D70-49AA-8C96-C6444AD3DF59}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Repository</RootNamespace>
+    <AssemblyName>Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\ServerContext.cs" />
+    <Compile Include="Migrations\201707031953341_init_db.cs" />
+    <Compile Include="Migrations\201707031953341_init_db.Designer.cs">
+      <DependentUpon>201707031953341_init_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707101929370_Add_Movimentacao.cs" />
+    <Compile Include="Migrations\201707101929370_Add_Movimentacao.Designer.cs">
+      <DependentUpon>201707101929370_Add_Movimentacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707122127359_init_db1.cs" />
+    <Compile Include="Migrations\201707122127359_init_db1.Designer.cs">
+      <DependentUpon>201707122127359_init_db1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707122142286_init_db2.cs" />
+    <Compile Include="Migrations\201707122142286_init_db2.Designer.cs">
+      <DependentUpon>201707122142286_init_db2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707122146329_Initial.cs" />
+    <Compile Include="Migrations\201707122146329_Initial.Designer.cs">
+      <DependentUpon>201707122146329_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709301940118_init_dog.cs" />
+    <Compile Include="Migrations\201709301940118_init_dog.Designer.cs">
+      <DependentUpon>201709301940118_init_dog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710022229326_init_coord.cs" />
+    <Compile Include="Migrations\201710022229326_init_coord.Designer.cs">
+      <DependentUpon>201710022229326_init_coord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710030324186_init_coordcampo.cs" />
+    <Compile Include="Migrations\201710030324186_init_coordcampo.Designer.cs">
+      <DependentUpon>201710030324186_init_coordcampo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711162140364_removido_end.cs" />
+    <Compile Include="Migrations\201711162140364_removido_end.Designer.cs">
+      <DependentUpon>201711162140364_removido_end.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711211154242_dispositivos_db.cs" />
+    <Compile Include="Migrations\201711211154242_dispositivos_db.Designer.cs">
+      <DependentUpon>201711211154242_dispositivos_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711211416021_status_cachorro.cs" />
+    <Compile Include="Migrations\201711211416021_status_cachorro.Designer.cs">
+      <DependentUpon>201711211416021_status_cachorro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711241904167_dogdb.cs" />
+    <Compile Include="Migrations\201711241904167_dogdb.Designer.cs">
+      <DependentUpon>201711241904167_dogdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711290205445_dog_db_lnd_lat_rai.cs" />
+    <Compile Include="Migrations\201711290205445_dog_db_lnd_lat_rai.Designer.cs">
+      <DependentUpon>201711290205445_dog_db_lnd_lat_rai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811162306474_init_db3.cs" />
+    <Compile Include="Migrations\201811162306474_init_db3.Designer.cs">
+      <DependentUpon>201811162306474_init_db3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811162313366_init_db4.cs" />
+    <Compile Include="Migrations\201811162313366_init_db4.Designer.cs">
+      <DependentUpon>201811162313366_init_db4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Base\BaseRepository.cs" />
+    <Compile Include="Repository\CachorrosRepository.cs" />
+    <Compile Include="Repository\DispositivosRepository.cs" />
+    <Compile Include="Repository\VacinasRepository.cs" />
+    <Compile Include="Repository\CoordenadasRepository.cs" />
+    <Compile Include="Repository\LocalizacaoRepository.cs" />
+    <Compile Include="Repository\UsuarioRepository.cs" />
+    <Compile Include="UnityOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{BDBE0338-1F5A-449E-948C-1831C32C665B}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707031953341_init_db.resx">
+      <DependentUpon>201707031953341_init_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707101929370_Add_Movimentacao.resx">
+      <DependentUpon>201707101929370_Add_Movimentacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707122127359_init_db1.resx">
+      <DependentUpon>201707122127359_init_db1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707122142286_init_db2.resx">
+      <DependentUpon>201707122142286_init_db2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707122146329_Initial.resx">
+      <DependentUpon>201707122146329_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709301940118_init_dog.resx">
+      <DependentUpon>201709301940118_init_dog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710022229326_init_coord.resx">
+      <DependentUpon>201710022229326_init_coord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710030324186_init_coordcampo.resx">
+      <DependentUpon>201710030324186_init_coordcampo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711162140364_removido_end.resx">
+      <DependentUpon>201711162140364_removido_end.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711211154242_dispositivos_db.resx">
+      <DependentUpon>201711211154242_dispositivos_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711211416021_status_cachorro.resx">
+      <DependentUpon>201711211416021_status_cachorro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711241904167_dogdb.resx">
+      <DependentUpon>201711241904167_dogdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711290205445_dog_db_lnd_lat_rai.resx">
+      <DependentUpon>201711290205445_dog_db_lnd_lat_rai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811162306474_init_db3.resx">
+      <DependentUpon>201811162306474_init_db3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811162313366_init_db4.resx">
+      <DependentUpon>201811162313366_init_db4.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
